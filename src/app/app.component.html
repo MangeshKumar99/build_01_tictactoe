@@ -1,12 +1,52 @@
 <div class="tictactoe-container">
-  <div style="border-top: none; border-left: none;" class="tictactoe-cell">1</div>
-  <div style="border-top: none;" class="tictactoe-cell">2</div>
-  <div style="border-top: none; border-right: none;" class="tictactoe-cell">3</div>
-  <div style="border-left: none;" class="tictactoe-cell">4</div>
-  <div class="tictactoe-cell">5</div>
-  <div style="border-right: none;" class="tictactoe-cell">6</div>
-  <div style="border-left: none; border-bottom: none;" class="tictactoe-cell">7</div>
-  <div style="border-bottom: none;" class="tictactoe-cell">8</div>
-  <div style="border-right: none; border-bottom: none;" class="tictactoe-cell">9</div>
+  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('1')" style="border-top: none; border-left: none;" class="tictactoe-cell">
+    <div class="cell-text">
+      {{ticTacToeArray[0][0]}}
+    </div>
+  </div>
+  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('2')" style="border-top: none;" class="tictactoe-cell">
+    <div class="cell-text">
+      {{ticTacToeArray[0][1]}}
+    </div>
+  </div>
+  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('3')" style="border-top: none; border-right: none;" class="tictactoe-cell">
+    <div class="cell-text">
+      {{ticTacToeArray[0][2]}}
+    </div>
+  </div>
+  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('4')" style="border-left: none;" class="tictactoe-cell">
+    <div class="cell-text">
+      {{ticTacToeArray[1][0]}}
+    </div>
+  </div>
+  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('5')" class="tictactoe-cell">
+    <div class="cell-text">
+      {{ticTacToeArray[1][1]}}
+    </div>
+  </div>
+  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('6')" style="border-right: none;" class="tictactoe-cell">
+    <div class="cell-text">
+      {{ticTacToeArray[1][2]}}
+    </div>
+  </div>
+  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('7')" style="border-left: none; border-bottom: none;" class="tictactoe-cell">
+    <div class="cell-text">
+      {{ticTacToeArray[2][0]}}
+    </div>
+  </div>
+  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('8')" style="border-bottom: none;" class="tictactoe-cell">
+    <div class="cell-text">
+      {{ticTacToeArray[2][1]}}
+    </div>
+  </div>
+  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('9')" style="border-right: none; border-bottom: none;" class="tictactoe-cell">
+    <div class="cell-text">
+      {{ticTacToeArray[2][2]}}
+    </div>
+  </div>
+</div>
+
+<div class="player-turn">
+  <div>{{isOTurn ? 'Os turn' : 'Xs turn'}}</div>
 </div>
 <router-outlet></router-outlet>
