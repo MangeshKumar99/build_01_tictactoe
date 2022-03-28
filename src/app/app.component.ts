@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tictactoe';
-  ticTacToeArray:string[][]=[['','',''],['','',''],['','','']]
+  ticTacToeArray:string[][]=[['','',''],['','',''],['','','']];
   isOTurn:boolean=true;
   onCellClick(cell:string){
     console.log(`${cell} clicked !`);
@@ -41,9 +41,67 @@ export class AppComponent {
         break;
     }
     this.isOTurn=!this.isOTurn;
-    console.log(this.ticTacToeArray);
+    this.decideWinner();
+  }
+  decideWinner(){
+    //horizontally
+    if(this.ticTacToeArray[0][0]==this.ticTacToeArray[0][1] && this.ticTacToeArray[0][1] == this.ticTacToeArray[0][2] && (this.ticTacToeArray[0][0]!='')){
+      setTimeout(()=>{
+        alert(`${this.ticTacToeArray[0][0]} wins`);
+        this.resetGame();
+      },50);
+    }
+    if(this.ticTacToeArray[1][0]==this.ticTacToeArray[1][1] && this.ticTacToeArray[1][1] == this.ticTacToeArray[1][2] && (this.ticTacToeArray[1][0]!='')){
+      setTimeout(()=>{
+        alert(`${this.ticTacToeArray[1][0]} wins`);
+        this.resetGame();
+      },50);
+    }
+    if(this.ticTacToeArray[2][0]==this.ticTacToeArray[2][1] && this.ticTacToeArray[2][1] == this.ticTacToeArray[2][2] && (this.ticTacToeArray[2][0]!='')){
+      setTimeout(()=>{
+        alert(`${this.ticTacToeArray[2][0]} wins`);
+        this.resetGame();
+      },50);
+    }
+    //vertically
+    if(this.ticTacToeArray[0][0]==this.ticTacToeArray[1][0] && this.ticTacToeArray[1][0] == this.ticTacToeArray[2][0] && (this.ticTacToeArray[0][0]!='')){
+      setTimeout(()=>{
+        alert(`${this.ticTacToeArray[0][0]} wins`);
+        this.resetGame();
+      },50);
+    }
+    if(this.ticTacToeArray[0][1]==this.ticTacToeArray[1][1] && this.ticTacToeArray[1][1] == this.ticTacToeArray[2][1] && (this.ticTacToeArray[0][1]!='')){
+      setTimeout(()=>{
+        alert(`${this.ticTacToeArray[0][1]} wins`);
+        this.resetGame();
+      },50);
+    }
+    if(this.ticTacToeArray[0][2]==this.ticTacToeArray[1][2] && this.ticTacToeArray[1][2] == this.ticTacToeArray[2][2] && (this.ticTacToeArray[0][2]!='')){
+      setTimeout(()=>{
+        alert(`${this.ticTacToeArray[0][2]} wins`);
+        this.resetGame();
+      },50);
+    }
+    //diagonally
+    if(this.ticTacToeArray[0][0]==this.ticTacToeArray[1][1] && this.ticTacToeArray[1][1] == this.ticTacToeArray[2][2] && (this.ticTacToeArray[0][0]!='')){
+      setTimeout(()=>{
+        alert(`${this.ticTacToeArray[0][0]} wins`);
+        this.resetGame();
+      },50);
+    }
+    if(this.ticTacToeArray[0][2]==this.ticTacToeArray[1][1] && this.ticTacToeArray[1][1] == this.ticTacToeArray[2][0] && (this.ticTacToeArray[0][2]!='')){
+      setTimeout(()=>{
+        alert(`${this.ticTacToeArray[0][2]} wins`);
+        this.resetGame();
+      },50);
+    }
+
   }
   ngOnInit(){
-    console.log(this.ticTacToeArray);
+   
+  }
+  resetGame(){
+    this.ticTacToeArray=[['','',''],['','',''],['','','']];
+    this.isOTurn=true;
   }
 }
