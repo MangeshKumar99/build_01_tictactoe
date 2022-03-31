@@ -11,7 +11,6 @@
        margin: 0;
        top: 42%;
        left: 42%;
-       font: normal 900 2.5vw SFCompact;
     }
     .tictactoe-cell{
         width: 32.6%;
@@ -20,16 +19,45 @@
     }
 }
 
+.player-turn{
+   position: absolute;
+   right:2vw;
+   font: normal 900 2.5vw SFCompact;
+}
+
+
+.tictactoe-heading{
+    display: flex;
+    justify-content: center;
+    padding-top: 1vh;
+    font: normal 900 5vh SFCompact;
+}
+
 @media only screen and (max-width: 600px) {
    .tictactoe-container{
        width: 90%;
        height: 40%;
    }
+   .cell-text{
+        font: normal 900 7.5vw SFCompact;
+   }
+   .player-turn{
+        font: normal 900 7.5vw SFCompact;
+    }
+    .tictactoe-heading{
+        font: normal 900 4vh SFCompact;
+    }
 }
 @media only screen and (min-width: 600px) {
     .tictactoe-container{
         width: 60%;
         height: 40%;
+    }
+    .cell-text{
+        font: normal 900 5.5vw SFCompact;
+   }
+   .player-turn{
+        font: normal 900 5vw SFCompact;
     }
 }
 
@@ -38,11 +66,23 @@
         width: 40%;
         height: 40%;
     }
+    .cell-text{
+        font: normal 900 3vw SFCompact;
+    }
+   .player-turn{
+        font: normal 900 4.5vw SFCompact;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     .tictactoe-container{
         width: 20%;
         height: 40%;
+    }
+    .cell-text{
+        font: normal 900 2.5vw SFCompact;
+    }
+   .player-turn{
+        font: normal 900 2.5vw SFCompact;
     }
 }

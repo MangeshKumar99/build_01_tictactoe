@@ -1,45 +1,45 @@
 <div class="tictactoe-container">
-  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('1')" style="border-top: none; border-left: none;" class="tictactoe-cell">
+  <div id="1" matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('1')" style="border-top: none; border-left: none;" class="tictactoe-cell">
     <div class="cell-text">
       {{ticTacToeArray[0][0]}}
     </div>
   </div>
-  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('2')" style="border-top: none;" class="tictactoe-cell">
+  <div id="2" matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('2')" style="border-top: none;" class="tictactoe-cell">
     <div class="cell-text">
       {{ticTacToeArray[0][1]}}
     </div>
   </div>
-  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('3')" style="border-top: none; border-right: none;" class="tictactoe-cell">
+  <div id="3" matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('3')" style="border-top: none; border-right: none;" class="tictactoe-cell">
     <div class="cell-text">
       {{ticTacToeArray[0][2]}}
     </div>
   </div>
-  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('4')" style="border-left: none;" class="tictactoe-cell">
+  <div id="4" matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('4')" style="border-left: none;" class="tictactoe-cell">
     <div class="cell-text">
       {{ticTacToeArray[1][0]}}
     </div>
   </div>
-  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('5')" class="tictactoe-cell">
+  <div id="5" matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('5')" class="tictactoe-cell">
     <div class="cell-text">
       {{ticTacToeArray[1][1]}}
     </div>
   </div>
-  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('6')" style="border-right: none;" class="tictactoe-cell">
+  <div id="6" matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('6')" style="border-right: none;" class="tictactoe-cell">
     <div class="cell-text">
       {{ticTacToeArray[1][2]}}
     </div>
   </div>
-  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('7')" style="border-left: none; border-bottom: none;" class="tictactoe-cell">
+  <div id="7" matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('7')" style="border-left: none; border-bottom: none;" class="tictactoe-cell">
     <div class="cell-text">
       {{ticTacToeArray[2][0]}}
     </div>
   </div>
-  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('8')" style="border-bottom: none;" class="tictactoe-cell">
+  <div id="8" matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('8')" style="border-bottom: none;" class="tictactoe-cell">
     <div class="cell-text">
       {{ticTacToeArray[2][1]}}
     </div>
   </div>
-  <div matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('9')" style="border-right: none; border-bottom: none;" class="tictactoe-cell">
+  <div id="9" matTooltip="{{isOTurn ? '0' : 'X'}}" (click)="onCellClick('9')" style="border-right: none; border-bottom: none;" class="tictactoe-cell">
     <div class="cell-text">
       {{ticTacToeArray[2][2]}}
     </div>
@@ -48,5 +48,9 @@
 
 <div class="player-turn">
   <div>{{isOTurn ? 'Os turn' : 'Xs turn'}}</div>
+</div>
+
+<div class="tictactoe-heading">
+  TicTacToe
 </div>
 <router-outlet></router-outlet>

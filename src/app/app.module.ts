@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatTooltipModule} from '@angular/material/tooltip';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +16,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTooltipModule
+    MatTooltipModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
